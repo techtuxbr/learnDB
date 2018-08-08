@@ -1,0 +1,1 @@
+int isStarter(char* token);
