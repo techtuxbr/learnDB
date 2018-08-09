@@ -11,6 +11,11 @@ struct Node {
 struct Node* front = NULL;
 struct Node* rear = NULL;
 
+void startStack(){
+	front = NULL;
+	rear = NULL;
+}
+
 // To Enqueue an integer
 void Enqueue(char* x) {
 	struct Node* temp = 

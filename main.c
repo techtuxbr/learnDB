@@ -5,7 +5,11 @@
 int main(){
     char token[255];
 
-    readLDB("ufersa.ldb");
+    do{
+        printf("\b");
+        fgets(token,255,stdin);
+        readLDB(token);
+    }while(strcmp(token,"fechar"));
 
     /* 
     Enqueue("CRIAR"); Print(); 

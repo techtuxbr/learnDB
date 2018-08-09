@@ -23,6 +23,15 @@ bool isOperator(char ch)
         return (true);
     return (false);
 }
+
+bool isString(char* str){
+    //strcmp()
+    if(str[0] == '\"' && str[strlen(str)-1] == '\"'){
+        return (true);
+    }else{
+        return (false);
+    }
+}
  
 // Returns 'true' if the string is a VALID IDENTIFIER.
 bool validIdentifier(char* str)
@@ -38,18 +47,7 @@ bool validIdentifier(char* str)
 // Returns 'true' if the string is a KEYWORD.
 bool isKeyword(char* str)
 {
-    if (!strcmp(str, "if") || !strcmp(str, "else") ||
-        !strcmp(str, "while") || !strcmp(str, "do") || 
-        !strcmp(str, "break") || 
-         !strcmp(str, "continue") || !strcmp(str, "int")
-        || !strcmp(str, "double") || !strcmp(str, "float")
-        || !strcmp(str, "return") || !strcmp(str, "char")
-        || !strcmp(str, "case") || !strcmp(str, "char")
-        || !strcmp(str, "sizeof") || !strcmp(str, "long")
-        || !strcmp(str, "short") || !strcmp(str, "typedef")
-        || !strcmp(str, "switch") || !strcmp(str, "unsigned")
-        || !strcmp(str, "void") || !strcmp(str, "static")
-        || !strcmp(str, "struct") || !strcmp(str, "goto"))
+    if (!strcmp(str, "BANCO"))
         return (true);
     return (false);
 }
